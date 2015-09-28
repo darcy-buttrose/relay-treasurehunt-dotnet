@@ -13,7 +13,7 @@ var loadersByExtension = require("./loadersByExtension");
         "./app/entry.jsx"
     ];
     var loaders = {
-        "jsx": ["react-hot-loader", "babel-loader?stage=0"],
+        "jsx": ["react-hot-loader", "babel-loader?stage=0&plugins=./app/babelRelayPlugin"],
         "js": {
             loader: "babel-loader?stage=0",
             include: path.join(__dirname, "app")
@@ -108,7 +108,7 @@ var loadersByExtension = require("./loadersByExtension");
         module: {
             loaders: loadersByExtension(loaders).concat(loadersByExtension(stylesheetLoaders)).concat(additionalLoaders)
         },
-        devtool: "eval",
+        devtool: "source-map",
         debug: true,
         resolveLoader: {
             root: path.join(__dirname, "node_modules"),

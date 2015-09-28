@@ -81,9 +81,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app\app.jsx" />
-    <Content Include="app\destination.jsx" />
+    <Content Include="app\babelRelayPlugin.js" />
+    <Content Include="app\components\game\checkHidingSpotForTreasureMutation.jsx" />
+    <Content Include="app\components\app.jsx" />
     <None Include="app\entry.jsx" />
+    <Content Include="app\data\updateSchema.js" />
     <Content Include="bootstrap.config.js" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
@@ -101,6 +103,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\GraphQLController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -109,9 +112,13 @@
   <ItemGroup>
     <Content Include="packages.config" />
     <Content Include="package.json" />
-    <Content Include="app\query.jsx" />
+    <Content Include="app\components\query\query.jsx" />
     <Content Include="bootstrap.config.less" />
-    <Content Include="app\game.jsx" />
+    <Content Include="app\components\game\game.jsx" />
+    <Content Include="app\components\game\treasureHuntRoute.jsx" />
+    <Content Include="app\components\game\treasureHunt.jsx" />
+    <Content Include="app\data\schq.json" />
+    <Content Include="app\data\schema.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

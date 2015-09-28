@@ -8,6 +8,7 @@ export default class Query extends React.Component {
     }
 
     graphQLFetcher(graphQLParams) {
+        console.log(JSON.stringify(graphQLParams));
         return fetch(window.location.origin + '/api/graphql', {
             method: 'post',
             headers: { 'Content-Type': 'application/json' },
